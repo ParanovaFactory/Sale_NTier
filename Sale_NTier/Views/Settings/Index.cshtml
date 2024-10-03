@@ -1,0 +1,30 @@
+﻿@model Sale_NTier.Models.UserEditVievModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<h1>User Profile Settings</h1>
+
+<form method="post">
+    @Html.Label("Name")
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    @Html.Label("Surname")
+    <input type="text" asp-for="Surname" class="form-control" />
+    <br />
+    @Html.Label("Mail Address")
+    <input type="text" asp-for="Mail" class="form-control" />
+    <br />
+    @Html.Label("Gender")
+    <input type="text" asp-for="Gender" class="form-control" />
+    <br />
+    @Html.Label("Password")
+    <input type="text" asp-for="Password" class="form-control" />
+    <br />
+    @Html.Label("Confirm Password")
+    <input type="text" asp-for="ConfirmPassword" class="form-control" />
+    <br />
+    <button class="btn btn-warning">Save changes</button>
+</form>

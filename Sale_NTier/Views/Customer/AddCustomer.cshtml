@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Customer
+@{
+    ViewData["Title"] = "AddCustomer";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<h1>Add Customer</h1>
+
+<form method="post">
+
+    @Html.Label("Name")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Name)
+
+    <br />
+    @Html.Label("City")
+    @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.City)
+
+    <br />
+    @Html.Label("Job")
+    @Html.DropDownListFor(x => x.JobId,(List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.City)
+
+    <br />
+    <button class="btn btn-outline-info">Add New Customer</button>
+</form>
